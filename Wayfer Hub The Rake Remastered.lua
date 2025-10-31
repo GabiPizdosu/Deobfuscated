@@ -1,8 +1,7 @@
+--https://discord.gg/6T86sQkv7V
 if not Dbx_vXMlBwphywJ then
 	MoonSec_StringsHiddenAttr = true;
-	if _ALkmEZBjMrzi ~= "This file was protected with MoonSec V3" then
-		return
-	else
+	if true then
 		start = function()
 			local l_clonefunction_0 = clonefunction;
 			local _ = l_clonefunction_0(game.HttpGet)
@@ -18,7 +17,8 @@ if not Dbx_vXMlBwphywJ then
 			local _ = game:GetService("StarterGui")
 			local l_Lighting_0 = game:GetService("Lighting")
 			local _ = game:GetService("ProximityPromptService")
-			local v14 = {
+			local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GabiPizdosu/Deobfuscated/refs/heads/main/WYF_Lib.lua",true))()
+            local v14 = {
 				PlayersEsp = {
 					Enabled = true,
 					Tracers = false,
@@ -1375,7 +1375,7 @@ if not Dbx_vXMlBwphywJ then
 				l_TextLabel_1.Text = "Power: " .. math.ceil(l_PowerLevel_0.Value / l_PowerLevel_0.MaxValue * 100) .. "%"
 			end)
 			l_TextLabel_1.Text = "Power: " .. math.ceil(l_PowerLevel_0.Value / l_PowerLevel_0.MaxValue * 100) .. "%"
-			local l_Library_Window_0 = Library:CreateWindow({
+            local l_Library_Window_0 = Library:CreateWindow({
 				Name = "Rakochet",
 				Credit = "by Wayfer",
 				SaveConfig = true,
@@ -1857,44 +1857,10 @@ if not Dbx_vXMlBwphywJ then
 			})
 			Library:Init()
 		end;
-		local l_clonefunction_1 = clonefunction;
-		local v394 = l_clonefunction_1(game.HttpGet)
-		l_clonefunction_1(loadstring)(v394(game, "https://gist.githubusercontent.com/MrTomatoesM/d5f718e69fb790dc1237aeecaf47d7a0/raw/Key%2520System"))()
+        start()
+		--local l_clonefunction_1 = clonefunction;
+		--local v394 = l_clonefunction_1(game.HttpGet)
+		--l_clonefunction_1(loadstring)(v394(game, "https://gist.githubusercontent.com/MrTomatoesM/d5f718e69fb790dc1237aeecaf47d7a0/raw/Key%2520System"))()
 		return
 	end
-else
-	local v395 = ({
-		...
-	})[1]
-	local v396 = 0;
-	Dbx_vXMlBwphywJ(function(v397)
-		v396 = v397
-	end)
-	local l_type_0 = type;
-	local l_sub_0 = string.sub;
-	local l_foreach_0 = table.foreach;
-	local l_char_0 = string.char;
-	local _ = string.byte;
-	local v403 = {}
-	for v404 = 0, 255 do
-		local v405 = l_char_0(v404)
-		v403[v404] = v405;
-		v403[v405] = v404
-	end;
-	local v406 = nil;
-	v406 = function(v407)
-		if l_type_0(v407) == "table" then
-			l_foreach_0(v407, function(v408, v409)
-				v407[v408] = v406(v409)
-			end)
-		elseif l_type_0(v407) == "string" and #v407 > 1 and l_sub_0(v407, 1, 1) == "\254" then
-			local v410 = ""
-			for v411 = 2, #v407 do
-				v410 = v410 .. v403[(v403[l_sub_0(v407, v411, v411)] + v396) % 256]
-			end;
-			return v410
-		end;
-		return v407
-	end;
-	return (v406(v395))
 end

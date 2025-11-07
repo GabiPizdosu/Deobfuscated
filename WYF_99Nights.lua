@@ -1,6 +1,6 @@
 --[[
 hey wayfer can we write better code pls
-    renamed some variables & functions
+    renamed some variables & functions, note that some might be incorrectly named (maybe)
     
         FRAG.CC
     https://discord.gg/GCbRmCs5as 
